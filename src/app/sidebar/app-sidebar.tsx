@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 import {
   AudioWaveform,
   BookOpen,
@@ -12,7 +12,7 @@ import {
   PieChart,
   Settings2,
   SquareTerminal,
-} from "lucide-react";
+} from 'lucide-react';
 
 import {
   Sidebar,
@@ -20,95 +20,99 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar";
-import { TeamSwitcher } from "./team-switcher";
-import { NavMain } from "./nav-main";
-import { NavUser } from "./nav-users";
+} from '@/components/ui/sidebar';
+import { TeamSwitcher } from './team-switcher';
+import { NavMain } from './nav-main';
+import { NavUser } from './nav-users';
 
 // This is sample data.
 const data = {
   user: {
-    name: "abdullo_me",
-    email: "abdulloergashxojayev01@gmail.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: 'abdullo_me',
+    email: 'abdulloergashxojayev01@gmail.com',
+    avatar: '/avatars/shadcn.jpg',
   },
   teams: [
     {
-      name: "Tashkent",
+      name: 'Tashkent',
       logo: GalleryVerticalEnd,
-      plan: "Main",
+      plan: 'Main',
     },
     {
-      name: "Namangan",
+      name: 'Namangan',
       logo: AudioWaveform,
-      plan: "Secondary",
+      plan: 'Secondary',
     },
     {
-      name: "Fargana",
+      name: 'Fargana',
       logo: Command,
-      plan: "Other",
+      plan: 'Other',
     },
   ],
   navMain: [
     {
-      title: "Dashboard",
-      url: "/dashboard",
+      title: 'Dashboard',
+      url: '/dashboard',
       icon: PieChart,
     },
 
     {
-      title: "Playground",
-      url: "#",
+      title: 'Playground',
+      url: '#',
       icon: SquareTerminal,
       items: [
         {
-          title: "Home",
-          url: "/home",
+          title: 'Home',
+          url: '/home',
         },
         {
-          title: "Inbox",
-          url: "/inbox",
+          title: 'Inbox',
+          url: '/inbox',
         },
         {
-          title: "Settings",
-          url: "/settings",
+          title: 'Settings',
+          url: '/settings',
+        },
+        {
+          title: 'Orders',
+          url: '/orders',
         },
       ],
     },
     {
-      title: "Models",
-      url: "#",
+      title: 'Models',
+      url: '#',
       icon: Bot,
       items: [
         {
-          title: "Users",
-          url: "/users",
+          title: 'Users',
+          url: '/users',
         },
         {
-          title: "Projects",
-          url: "/projects",
+          title: 'Projects',
+          url: '/projects',
         },
         {
-          title: "Calnendar",
-          url: "/calendar",
+          title: 'Calnendar',
+          url: '/calendar',
         },
       ],
     },
   ],
   projects: [
     {
-      name: "Design Engineering",
-      url: "#",
+      name: 'Design Engineering',
+      url: '#',
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
-      url: "#",
+      name: 'Sales & Marketing',
+      url: '#',
       icon: PieChart,
     },
     {
-      name: "Travel",
-      url: "#",
+      name: 'Travel',
+      url: '#',
       icon: Map,
     },
   ],
@@ -116,7 +120,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible='icon' {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
